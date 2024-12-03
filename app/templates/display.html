@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>image Images</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+</head>
+<body>
+    <h1>Drive</h1>
+    {% for i in drive %}
+ 
+            <iframe src="https://drive.google.com/file/d/{{i}}/preview" width="640" height="480"></iframe>
+
+    {% endfor %}
+    <h1>Local</h1>
+    {% for i in local %}
+            {{i.name}}
+            <img src="media/{{i.imagen}}" width="640" height="480">
+            <img src="media/{{i.ok}}" width="640" height="480">
+           
+    {% endfor %}
+</body>
+</html>
